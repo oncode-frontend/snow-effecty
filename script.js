@@ -1,19 +1,21 @@
 const $ = document
 
 
-window.addEventListener("click", (ev) =>{
-    // console.log(ev.offsetX);
-    // console.log(ev.offsetY);
-    let domAppend = `
-        <span>
-            <img class="snowflake" 
-                src="assets/snowflake-image.svg" 
-                alt="snow"
-                style="width: ">
-        </span>
-    `
-    // console.log(Math.random() * 1000);
-    console.log(randomlyWidth(100, 500));
+$.addEventListener("click", (ev) =>{
+    
+    let snowSpan = document.createElement('span')
+    snowSpan.classList.add('snowflake')
+
+    snowSpan.style.left = ev.clientX + 'px'
+    snowSpan.style.top = ev.clientY + 'px'
+
+    snowSpan.style.width = randomlyWidth(100, 300) + 'px'
+    snowSpan.style.height = randomlyWidth(100, 300) + 'px'
+
+    $.body.appendChild(snowSpan)
+    setTimeout(() => {
+        snowSpan.remove()
+    }, 2000);
 })
 
 function randomlyWidth(min, max) {
