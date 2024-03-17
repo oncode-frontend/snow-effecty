@@ -10,10 +10,10 @@ body {
 }
 .snowflake {
   position: absolute;
-  background-image: url("snowflake-image.svg");
+  background-image: url("./assets/snowflake-image.svg");
   background-size: cover;
   border-radius: 50px;
-  animation: fall 2s linear infinite;
+  animation: fall 5s linear infinite;
 }
 @keyframes fall {
   0% {
@@ -27,8 +27,6 @@ body {
 }
 .cloud-span img{
   position: absolute;
-  /* animation-name: move;
-  animation-duration: 10000ms; */
   animation-iteration-count: infinite;
 }
 .cloud-span img:nth-child(1){
